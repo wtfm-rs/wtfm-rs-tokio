@@ -1,16 +1,44 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Introduction"><title>wtfm_rs_tokio - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-ca0dd0c4.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="wtfm_rs_tokio" data-themes="" data-resource-suffix="" data-rustdoc-version="1.93.0 (254b59607 2026-01-19)" data-channel="1.93.0" data-search-js="search-9e2438ea.js" data-stringdex-js="stringdex-a3946164.js" data-settings-js="settings-c38705f0.js" ><script src="../static.files/storage-e2aeef58.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-a410ff4d.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-263c88ec.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar><h2><a href="#">Crate wtfm_rs_tokio</a></h2></rustdoc-topbar><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../wtfm_rs_tokio/index.html">wtfm_<wbr>rs_<wbr>tokio</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#introduction" title="Introduction">Introduction</a><ul><li><a href="#why-do-we-need-a-separate-repo" title="Why do we need a separate repo?">Why do we need a separate repo?</a></li><li><a href="#current-thread" title="current thread">current thread</a></li><li><a href="#multi-thread" title="multi-thread">multi-thread</a></li><li><a href="#tokiomain" title="tokio::main">tokio::main</a></li></ul></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>wtfm_<wbr>rs_<wbr>tokio</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/wtfm_rs_tokio/lib.rs.html#1-87">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="introduction"><a class="doc-anchor" href="#introduction">§</a>Introduction</h2>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Introduction"><title>wtfm_rs_tokio - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-ca0dd0c4.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="wtfm_rs_tokio" data-themes="" data-resource-suffix="" data-rustdoc-version="1.93.0 (254b59607 2026-01-19)" data-channel="1.93.0" data-search-js="search-9e2438ea.js" data-stringdex-js="stringdex-a3946164.js" data-settings-js="settings-c38705f0.js" ><script src="../static.files/storage-e2aeef58.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-a410ff4d.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-263c88ec.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar><h2><a href="#">Crate wtfm_rs_tokio</a></h2></rustdoc-topbar><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../wtfm_rs_tokio/index.html">wtfm_<wbr>rs_<wbr>tokio</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#introduction" title="Introduction">Introduction</a><ul><li><a href="#why-do-we-need-a-separate-repo" title="Why do we need a separate repo?">Why do we need a separate repo?</a></li><li><a href="#current-thread" title="current thread">current thread</a></li><li><a href="#multi-thread" title="multi-thread">multi-thread</a></li><li><a href="#tokiomain" title="tokio::main">tokio::main</a></li></ul></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>wtfm_<wbr>rs_<wbr>tokio</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/wtfm_rs_tokio/lib.rs.html#1-118">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="introduction"><a class="doc-anchor" href="#introduction">§</a>Introduction</h2>
 <p>This is the tokio version of <a href="https://wtfm-rs.github.io/doc/wtfm_rs/">https://wtfm-rs.github.io/doc/wtfm_rs/</a>.</p>
 <h3 id="why-do-we-need-a-separate-repo"><a class="doc-anchor" href="#why-do-we-need-a-separate-repo">§</a>Why do we need a separate repo?</h3>
 <p>We want to use <a href="../tokio/index.html" title="mod tokio">tokio</a> runtime for async functions.
 Our minimum <code>Cargo.toml</code> only pulls in <a href="../tokio/index.html" title="mod tokio">tokio</a> crate
-so that we can write tests with deep dive to the dependencies.</p>
+so that we can write tests and deep dive into the dependencies.</p>
 <div class="example-wrap"><pre class="language-toml"><code>[package]
 name = &quot;wtfm-rs-tokio&quot;
 version = &quot;0.1.0&quot;
 edition = &quot;2024&quot;
 
 [dependencies]
-tokio = { version = &quot;1.49.0&quot;, features = [&quot;full&quot;] }</code></pre></div><h3 id="current-thread"><a class="doc-anchor" href="#current-thread">§</a>current thread</h3>
+tokio = { version = &quot;1.49.0&quot;, features = [&quot;full&quot;] }</code></pre></div><div class="example-wrap"><pre class="language-text"><code>% cargo tree
+└── tokio v1.49.0
+   ├── bytes v1.11.0
+   ├── libc v0.2.180
+   ├── mio v1.1.1
+   │   └── libc v0.2.180
+   ├── parking_lot v0.12.5
+   │   ├── lock_api v0.4.14
+   │   │   └── scopeguard v1.2.0
+   │   └── parking_lot_core v0.9.12
+   │       ├── cfg-if v1.0.4
+   │       ├── libc v0.2.180
+   │       └── smallvec v1.15.1
+   ├── pin-project-lite v0.2.16
+   ├── signal-hook-registry v1.4.8
+   │   ├── errno v0.3.14
+   │   │   └── libc v0.2.180
+   │   └── libc v0.2.180
+   ├── socket2 v0.6.2
+   │   └── libc v0.2.180
+   └── tokio-macros v2.6.0 (proc-macro)
+       ├── proc-macro2 v1.0.106
+       │   └── unicode-ident v1.0.22
+       ├── quote v1.0.44
+       │   └── proc-macro2 v1.0.106 (*)
+       └── syn v2.0.114
+           ├── proc-macro2 v1.0.106 (*)
+           ├── quote v1.0.44 (*)
+           └── unicode-ident v1.0.22</code></pre></div><h3 id="current-thread"><a class="doc-anchor" href="#current-thread">§</a>current thread</h3>
 <div class="example-wrap"><pre class="rust rust-example-rendered"><code>tokio::runtime::Builder::new_current_thread()
        .enable_all()
        .build()
